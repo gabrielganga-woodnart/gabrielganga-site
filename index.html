@@ -1,322 +1,257 @@
-<title>Gabriel Ganga Originals</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gabriel Ganga Originals · Custom Woodwork South Florida</title>
+<meta name="description" content="Custom furniture, built-ins, restorations and wood art by Gabriel Ganga. 26 years in South Florida. Direct with the maker. WhatsApp (786) 413-6087.">
+<meta property="og:title" content="Gabriel Ganga Originals">
+<meta property="og:description" content="Custom woodwork by hand. 26 years in South Florida.">
+<meta property="og:image" content="img/hero-blue-fireplace.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Montserrat:wght@700&family=Sacramento&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap">
 <style>
-/* Layout: clean gallery site. Full-bleed photo hero, white header, square edges, big real photos in strict grids. The premium shelf flips to black. Single light look by choice. */
-:root{--paper:#f5f5f3;--white:#ffffff;--ink:#111111;--mid:#66665f;--line:#dededa;--wood:#8b5a2b;--black:#0d0d0d;--gold:#c9a35a;--wa:#25d366;
---f:"Jost","Futura","Century Gothic","Avenir Next",system-ui,sans-serif;color-scheme:light}
-*{box-sizing:border-box;border-radius:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{display:block;max-width:100%}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:18px}
-h1,h2,h3{font-family:var(--f);font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;margin:0;text-wrap:balance}
-.label{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--wood)}
-:focus-visible{outline:2px solid var(--wood);outline-offset:3px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f);font-weight:700;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 22px;border:2px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .15s,color .15s}
-.btn:hover{background:transparent;color:var(--ink)}
-.btn-line{background:transparent;color:var(--ink)}.btn-line:hover{background:var(--ink);color:var(--white)}
-.btn-light{background:var(--white);color:var(--ink);border-color:var(--white)}.btn-light:hover{background:transparent;color:var(--white)}
-.btn-ghost-light{background:transparent;color:var(--white);border-color:var(--white)}.btn-ghost-light:hover{background:var(--white);color:var(--ink)}
-.btn-wa{background:var(--wa);border-color:var(--wa);color:#08200f}.btn-wa:hover{background:#1fb85a;color:#08200f}
-.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--black)}.btn-gold:hover{background:transparent;color:var(--gold)}
-.btn-sm{padding:10px 14px;font-size:12px}
-.btn svg{width:17px;height:17px;flex:none}
-.seal{display:block}
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--white);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:10px}
-.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand .seal{width:52px;height:48px;color:var(--ink)}
-.brand b{display:block;font-weight:800;font-size:15px;letter-spacing:.12em;line-height:1.1}
-.brand small{display:block;font-weight:500;font-size:10px;letter-spacing:.34em;color:var(--mid)}
-.menu{display:none;gap:26px}
-.menu a{text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-.menu a:hover{color:var(--wood)}
-@media (min-width:900px){.menu{display:flex}}
-/* hero */
-.hero{position:relative;color:var(--white);background:#1a1612}
-.hero>img{width:100%;height:clamp(560px,88vh,820px);object-fit:cover;object-position:50% 45%}
-.hero-seal{position:absolute;top:18px;left:18px;width:92px;aspect-ratio:274/252;color:var(--white);filter:drop-shadow(0 1px 6px rgba(0,0,0,.4))}
-.hero-txt{position:absolute;inset:auto 0 0 0;padding-block:90px 34px;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.35) 60%,rgba(0,0,0,0))}
-.hero-txt .wrap{display:grid;gap:16px}
-.hero .label{color:var(--white);opacity:.9}
-.hero h1{font-size:clamp(40px,10.5vw,96px);line-height:.95}
-.hero p{margin:0;font-size:17px;max-width:40ch;opacity:.92}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
-@media (min-width:900px){.hero-txt{padding-block:140px 64px}}
-.facts{background:var(--white);border-bottom:1px solid var(--line)}
-.facts .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
-.facts .f{padding:22px 0;display:grid;gap:4px}
-.facts .f:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
-.facts .f:nth-child(-n+2){border-bottom:1px solid var(--line)}
-.facts strong{font-weight:800;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
-.facts span{font-size:13px;color:var(--mid)}
-@media (min-width:900px){.facts .wrap{grid-template-columns:repeat(4,1fr)}.facts .f{border-bottom:0!important;padding-left:22px;border-left:1px solid var(--line)}.facts .f:first-child{border-left:0;padding-left:0}}
-section{padding-block:72px 0}
-.head{display:grid;gap:12px;margin-bottom:28px}
-.head h2{font-size:clamp(30px,7.6vw,56px)}
-.head p{margin:0;color:var(--mid);max-width:56ch}
-/* photo tiles */
-.ph{position:relative;overflow:hidden;background:#d8d4cc;cursor:zoom-in;margin:0}
-.ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.ph:hover img{transform:scale(1.035)}
-.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,0));color:#fff}
-.ph figcaption b{display:block;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
-.ph figcaption span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
-/* feature project */
-.feature{display:grid;gap:10px}
-.feature .main{aspect-ratio:16/10}
-.feature .side{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.feature .side .ph{aspect-ratio:1/1}
-@media (min-width:900px){.feature{grid-template-columns:2fr 1fr}.feature .main{aspect-ratio:auto;height:100%;min-height:520px}.feature .side{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.feature .side .ph{aspect-ratio:auto}}
-.works{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
-.works .ph{aspect-ratio:3/4}
-.works .wide{grid-column:span 2;aspect-ratio:16/10}
-@media (min-width:900px){.works{grid-template-columns:repeat(4,1fr)}.works .wide{grid-column:span 2;aspect-ratio:auto}}
-/* restorations: before-style pairs */
-.rest{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.rest .ph{aspect-ratio:3/4}
-@media (min-width:900px){.rest{grid-template-columns:repeat(4,1fr)}}
-/* wood & leather */
-.art{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.art .ph{aspect-ratio:1/1}
-@media (min-width:900px){.art{grid-template-columns:repeat(4,1fr)}}
-.note{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;color:var(--mid);font-size:14px}
+/* Layout: Sample A chosen. Quiet front door (big photo, original GG seal, four photo doors); each door opens its own page with a strict photo grid. Single light look by choice. */
+:root{
+  --paper:#ffffff; --ink:#141412; --mute:#6d6b66; --line:#e2e0da; --soft:#f5f4f0;
+  --gold:#b8955a; --wa:#1f9d55;
+  --font:'Jost','Futura','Century Gothic','Trebuchet MS',sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+img{display:block}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;border-radius:0;border:1.5px solid currentColor;cursor:pointer;background:transparent;color:inherit}
+.btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.tiny{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+/* header */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:var(--paper);border-bottom:1px solid var(--line)}
+.head .logo img{height:50px;width:auto}
+.head nav{display:flex;gap:16px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.head nav a[aria-current="page"]{border-bottom:2px solid var(--ink)}
+
+/* home */
+.hero{position:relative;width:100%;aspect-ratio:4/5;max-height:680px;overflow:hidden;background:var(--soft)}
+.hero > img{width:100%;height:100%;object-fit:cover}
+.hero .cap{position:absolute;inset:auto 0 0 0;padding:40px 16px 24px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;display:grid;gap:8px}
+.hero .cap img{width:110px;height:auto}
+.hero h1{margin:0;font-weight:700;font-size:clamp(30px,8vw,58px);line-height:1;letter-spacing:.02em;text-transform:uppercase;text-wrap:balance}
+.hero p{margin:0;font-weight:300;font-size:16px}
+@media (min-width:900px){.hero{aspect-ratio:16/9}}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px}
+@media (min-width:900px){.doors{grid-template-columns:repeat(4,1fr)}}
+.door{position:relative;aspect-ratio:1;overflow:hidden}
+.door img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.door:hover img{transform:scale(1.04)}
+.door b{position:absolute;left:12px;bottom:12px;color:#fff;font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+
+/* section pages */
+.page{padding-inline:16px;max-width:1200px;margin:0 auto}
+.page-top{padding-block:32px 22px;display:grid;gap:8px}
+.page-top h1{margin:0;font-weight:700;font-size:clamp(32px,9vw,60px);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.page-top p{margin:0;max-width:52ch;color:var(--mute);font-size:16px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media (min-width:900px){.grid{grid-template-columns:repeat(3,1fr);gap:10px}}
+.grid figure{margin:0;min-width:0}
+.grid button{display:block;width:100%;padding:0;border:0;background:var(--soft);cursor:zoom-in;aspect-ratio:4/5;overflow:hidden}
+.grid button img{width:100%;height:100%;object-fit:cover}
+.grid figcaption{padding:8px 0 14px;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.grid .wide{grid-column:1/-1}
+.grid .wide button{aspect-ratio:3/2}
+
 /* shop */
-.index{display:grid;gap:10px}
-.index a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:20px;background:var(--white);border:1px solid var(--line);text-decoration:none;transition:border-color .15s}
-.index a:hover{border-color:var(--ink)}
-.index a b{display:block;font-weight:800;font-size:19px;letter-spacing:.06em;text-transform:uppercase}
-.index a small{color:var(--mid);font-size:13.5px}
-.index a .arr{font-weight:700;font-size:20px}
-.index a.prem{background:var(--black);border-color:var(--black);color:var(--white)}
-.index a.prem small{color:#a9a49a}.index a.prem .arr,.index a.prem b{color:var(--gold)}
-@media (min-width:900px){.index{grid-template-columns:repeat(3,1fr)}}
-.shelf{margin-top:56px}
-.shelf-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
-.shelf-head h3{font-size:clamp(24px,6vw,36px)}
-.shelf-head span{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mid)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 10px}
-@media (min-width:900px){.grid{grid-template-columns:repeat(4,1fr);gap:28px 16px}}
-.item{display:grid;gap:10px;min-width:0}
-.slot{aspect-ratio:1/1;background:#e3e0db;display:grid;place-items:center;color:rgba(17,17,17,.4);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:10px}
-.item b{font-weight:600;font-size:15px;line-height:1.25}
-.item .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:-4px}
-.item .cond{font-size:12px;color:var(--mid);letter-spacing:.06em;text-transform:uppercase}
-.item .price{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
-.coins{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 12px;background:var(--white);border:1px solid var(--line);padding:22px 16px}
-@media (min-width:900px){.coins{grid-template-columns:repeat(6,1fr);padding:30px}}
-.coin{display:grid;gap:6px;justify-items:center;text-align:center;min-width:0}
-.coin i{width:100%;max-width:96px;aspect-ratio:1;border-radius:50%;display:block;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.6),rgba(255,255,255,0) 42%),radial-gradient(circle,var(--c1) 0 64%,var(--c2) 65% 100%)}
-.coin b{font-size:13px;font-weight:600}.coin span{font-size:11.5px;color:var(--mid);letter-spacing:.06em;text-transform:uppercase}
-.silver{--c1:#cfd2d6;--c2:#9aa0a7}.gold{--c1:#e5c97c;--c2:#b08d3b}.copper{--c1:#cf9168;--c2:#8a5634}
-.vault{background:var(--black);color:var(--white);margin-top:72px;padding-block:64px}
-.vault .wrap{display:grid;gap:22px}
-.vault .label{color:var(--gold)}
-.vault h3{font-size:clamp(32px,8.5vw,64px)}
-.vault p{margin:0;color:#b3aea4;max-width:54ch}
-.lot{display:grid;gap:10px}
-.lot .imgs{display:grid;grid-template-columns:2fr 1fr;gap:8px}
-.lot .imgs .ph{background:#1d1a17}
-.lot .imgs .big{grid-row:span 2;aspect-ratio:auto;min-height:100%}
-.lot .imgs .sm{aspect-ratio:3/4}
-.lot .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-top:1px solid #33302b;padding-top:14px;flex-wrap:wrap}
-.lot .meta b{font-weight:700;font-size:clamp(17px,4.5vw,22px);letter-spacing:.06em;text-transform:uppercase}
-.lot .meta span{font-weight:700;color:var(--gold);font-size:18px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.lot small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8d887f}
-@media (min-width:900px){.lotwrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}}
-.steps{display:grid;gap:0;padding:0;margin:0;counter-reset:s}
-.steps li{list-style:none;display:grid;grid-template-columns:56px 1fr;gap:10px;padding:20px 0;border-top:1px solid var(--line)}
-.steps li::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:26px;color:var(--wood);line-height:1}
-.steps b{display:block;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.06em}
-.steps span{color:var(--mid);font-size:14.5px}
-@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:24px}}
-.about{display:grid;gap:24px}
-.about .ph{aspect-ratio:4/5}
-.about h2{font-size:clamp(28px,7vw,46px)}
-.about p{color:var(--mid);margin:0;max-width:58ch}
-@media (min-width:900px){.about{grid-template-columns:1fr 1fr;align-items:center;gap:56px}}
-.contact{background:var(--ink);color:var(--white);margin-top:80px;padding-block:56px calc(96px + env(safe-area-inset-bottom,0px))}
-.contact .wrap{display:grid;gap:20px}
-.contact .label{color:var(--gold)}
-.contact h2{font-size:clamp(30px,8vw,56px)}
-.big-seal{width:min(220px,60vw);aspect-ratio:274/252;color:var(--white)}
-.phone{font-weight:700;font-size:26px;letter-spacing:.04em;user-select:all}
-.socials{display:flex;flex-wrap:wrap;gap:8px}
-.socials a{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;border:1px solid #3a3a38;text-decoration:none;color:#cfcfcb}
-.socials a:hover{border-color:var(--white);color:var(--white)}
-.fine{font-size:12px;color:#8a8a86;letter-spacing:.06em}
-.float{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--white);border-top:1px solid var(--line)}
+.shelf{border-top:1px solid var(--ink);padding-block:22px 30px;display:grid;gap:14px}
+.shelf h2{margin:0;font-size:22px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.shelf h2 small{font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--mute)}
+.lot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;padding-top:4px}
+.lot b{font-size:18px;font-weight:600}
+.lot span{font-size:20px;font-weight:700;color:var(--gold)}
+.soon{background:var(--soft);padding:22px 18px;display:grid;gap:12px;justify-items:start;color:var(--mute);font-size:15px;line-height:1.5}
+
+/* footer */
+.foot{margin-top:28px;padding:36px 16px 96px;display:grid;gap:16px;border-top:1px solid var(--line);background:var(--soft)}
+.foot .ph{font-size:28px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.foot .row{display:flex;gap:10px;flex-wrap:wrap}
+.socials{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.foot .fine{font-size:12px;color:var(--mute)}
+.foot img.s{width:90px;height:auto}
+
+/* floating WhatsApp on phone */
+.float{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line);z-index:15}
 .float .btn{width:100%}
-@media (min-width:900px){.float{display:none}}
+@media (min-width:900px){.float{display:none}.foot{padding-bottom:44px}}
+
 /* lightbox */
-.lb[hidden]{display:none!important}
-.lb{position:fixed;inset:0;z-index:50;background:rgba(10,10,10,.94);display:grid;place-items:center;padding:16px}
-.lb img{max-height:86vh;width:auto;max-width:100%;object-fit:contain}
-.lb p{color:#ddd;text-align:center;margin:12px 0 0;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-.lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;background:transparent;border:2px solid #fff;color:#fff;font:700 13px var(--f);letter-spacing:.14em;padding:10px 14px;cursor:pointer}
-@media (prefers-reduced-motion:reduce){.ph img{transition:none}}
+.lb{position:fixed;inset:0;z-index:30;background:rgba(10,10,9,.94);display:grid;place-items:center;padding:16px}
+.lb img{max-width:100%;max-height:86vh;object-fit:contain}
+.lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;color:#fff;border-color:#fff;padding:10px 14px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+</head>
+<body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <!-- GG seal rebuilt to the exact geometry of Gabriel's Canva file (measured on its 447px canvas): outer ring r122, inner ring r78, bars at y223 from x90-159 and 287-356, text band r93-108. Only change: ORIGINALS without apostrophe. -->
-  <symbol id="seal" viewBox="86 97 274 252">
-    <path id="sealTop" d="M130 223 A93 93 0 0 1 316 223" fill="none"/>
-    <path id="sealBot" d="M115 223 A108 108 0 0 0 331 223" fill="none"/>
-    <circle cx="223" cy="223" r="122" fill="none" stroke="currentColor" stroke-width="2.2"/>
-    <circle cx="223" cy="223" r="78" fill="none" stroke="currentColor" stroke-width="1.2"/>
-    <rect x="90" y="222" width="69" height="3" fill="currentColor"/>
-    <rect x="287" y="222" width="69" height="3" fill="currentColor"/>
-    <text font-family="Montserrat, 'Arial Black', sans-serif" font-weight="700" font-size="21" fill="currentColor"><textPath href="#sealTop" startOffset="50%" text-anchor="middle" textLength="178" lengthAdjust="spacing">GABRIEL GANGA</textPath></text>
-    <text font-family="Montserrat, 'Arial Black', sans-serif" font-weight="700" font-size="21" fill="currentColor"><textPath href="#sealBot" startOffset="50%" text-anchor="middle" textLength="150" lengthAdjust="spacing">ORIGINALS</textPath></text>
-    <text x="224.5" y="262" font-family="Sacramento, 'Brush Script MT', cursive" font-size="118" fill="currentColor" text-anchor="middle" textLength="129" lengthAdjust="spacingAndGlyphs">GG</text>
-  </symbol>
-</svg>
 
-<header class="bar"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Gabriel Ganga Originals, home"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span><b>GABRIEL GANGA</b><small>ORIGINALS</small></span></a>
-  <nav class="menu" aria-label="Main"><a href="#work">Work</a><a href="#restorations">Restorations</a><a href="#art">Wood &amp; Leather</a><a href="#shop">Shop</a><a href="#contact">Contact</a></nav>
-  <a class="btn btn-sm" href="https://wa.me/17864136087" target="_blank" rel="noopener">Contact</a>
-</div></header>
-<main id="top">
-<div class="hero">
-  <img src="img/hero-blue-fireplace.jpg" alt="Living room with oak floating shelves on a navy wall beside a stone fireplace" fetchpriority="high">
-  <svg class="hero-seal" aria-hidden="true"><use href="#seal"/></svg>
-  <div class="hero-txt"><div class="wrap">
-    <span class="label">All your wood solutions in one place</span>
-    <h1>Fine woodwork. Straight from the maker.</h1>
-    <p>Custom furniture, restorations and wood art, built by hand in South Florida. You deal with Gabriel. Nobody in between.</p>
-    <div class="ctas"><a class="btn btn-light" href="https://wa.me/17864136087" target="_blank" rel="noopener">Start a project</a><a class="btn btn-ghost-light" href="#work">See the work</a></div>
-  </div></div>
-</div>
-<div class="facts"><div class="wrap">
-  <div class="f"><strong>26</strong><span>Years of fine woodwork in the U.S.</span></div>
-  <div class="f"><strong>1</strong><span>Maker, from first sketch to install</span></div>
-  <div class="f"><strong>0</strong><span>Middlemen between you and him</span></div>
-  <div class="f"><strong>100%</strong><span>Finished and installed by Gabriel</span></div>
-</div></div>
-
-<section id="work" class="wrap">
-  <div class="head"><span class="label">The Work</span><h2>Every piece signed GG.</h2><p>Kitchens, libraries, wall units, stairs and closets. Measured, built, finished and installed by the same hands.</p></div>
-  <div class="feature">
-    <figure class="ph main" data-cap="Turquoise Kitchen · Florida Keys"><img src="img/keys-kitchen-wide.jpg" alt="Turquoise kitchen with white quartz island and full wall of open shelving" loading="lazy"><figcaption><b>Turquoise Kitchen</b><span>Florida Keys</span></figcaption></figure>
-    <div class="side"><figure class="ph " data-cap="Appliance Wall · Florida Keys"><img src="img/keys-kitchen-appliances.jpg" alt="Appliance Wall" loading="lazy"><figcaption><b>Appliance Wall</b><span>Florida Keys</span></figcaption></figure><figure class="ph " data-cap="Waterfall Island · Florida Keys"><img src="img/keys-kitchen-island.jpg" alt="Waterfall Island" loading="lazy"><figcaption><b>Waterfall Island</b><span>Florida Keys</span></figcaption></figure></div>
-  </div>
-  <div class="works">
-    <figure class="ph " data-cap="Blue Library · Built-in"><img src="img/blue-library.jpg" alt="Blue Library" loading="lazy"><figcaption><b>Blue Library</b><span>Built-in</span></figcaption></figure>
-    <figure class="ph " data-cap="White Wall Unit · Built-in"><img src="img/white-tv-wall.jpg" alt="White Wall Unit" loading="lazy"><figcaption><b>White Wall Unit</b><span>Built-in</span></figcaption></figure>
-    <figure class="ph wide" data-cap="Walnut Media Wall · Built-in"><img src="img/walnut-entertainment.jpg" alt="Walnut Media Wall" loading="lazy"><figcaption><b>Walnut Media Wall</b><span>Built-in</span></figcaption></figure>
-    <figure class="ph " data-cap="Lit Bookcase · Home office"><img src="img/backlit-bookcase.jpg" alt="Lit Bookcase" loading="lazy"><figcaption><b>Lit Bookcase</b><span>Home office</span></figcaption></figure>
-    <figure class="ph " data-cap="Spiral Staircase · Stairs"><img src="img/spiral-stair.jpg" alt="Spiral Staircase" loading="lazy"><figcaption><b>Spiral Staircase</b><span>Stairs</span></figcaption></figure>
-    <figure class="ph " data-cap="Floating Treads · Stairs"><img src="img/floating-stairs.jpg" alt="Floating Treads" loading="lazy"><figcaption><b>Floating Treads</b><span>Stairs</span></figcaption></figure>
-    <figure class="ph " data-cap="Floating Shelves · LED lit"><img src="img/floating-shelves-blue.jpg" alt="Floating Shelves" loading="lazy"><figcaption><b>Floating Shelves</b><span>LED lit</span></figcaption></figure>
-    <figure class="ph " data-cap="Oak Library · Built-in"><img src="img/oak-library.jpg" alt="Oak Library" loading="lazy"><figcaption><b>Oak Library</b><span>Built-in</span></figcaption></figure>
-    <figure class="ph " data-cap="Modern Kitchen · Kitchen"><img src="img/modern-kitchen.jpg" alt="Modern Kitchen" loading="lazy"><figcaption><b>Modern Kitchen</b><span>Kitchen</span></figcaption></figure>
-    <figure class="ph wide" data-cap="Lakeside Pergola · Outdoor"><img src="img/pergola-lake.jpg" alt="Lakeside Pergola" loading="lazy"><figcaption><b>Lakeside Pergola</b><span>Outdoor</span></figcaption></figure>
-    <figure class="ph " data-cap="Walk-in Closet · Closets"><img src="img/closet.jpg" alt="Walk-in Closet" loading="lazy"><figcaption><b>Walk-in Closet</b><span>Closets</span></figcaption></figure>
-    <figure class="ph " data-cap="Floating Vanity · Bath"><img src="img/vanity.jpg" alt="Floating Vanity" loading="lazy"><figcaption><b>Floating Vanity</b><span>Bath</span></figcaption></figure>
-    <figure class="ph " data-cap="Barn Door · Doors"><img src="img/barn-door.jpg" alt="Barn Door" loading="lazy"><figcaption><b>Barn Door</b><span>Doors</span></figcaption></figure>
-    <figure class="ph " data-cap="Coffered Ceiling · Ceilings"><img src="img/ceiling-beams.jpg" alt="Coffered Ceiling" loading="lazy"><figcaption><b>Coffered Ceiling</b><span>Ceilings</span></figcaption></figure>
-  </div>
-</section>
-
-<section id="restorations" class="wrap">
-  <div class="head"><span class="label">Restorations</span><h2>Old pieces, second life.</h2><p>Broken joints, lost finishes, missing parts. Brought back by hand, keeping what makes each piece original.</p></div>
-  <div class="rest">
-    <figure class="ph " data-cap="Chinoiserie Chair · Restored"><img src="img/restore-chinoiserie-chair.jpg" alt="Chinoiserie Chair" loading="lazy"><figcaption><b>Chinoiserie Chair</b><span>Restored</span></figcaption></figure>
-    <figure class="ph " data-cap="Carved Console · Restored"><img src="img/restore-carved-console.jpg" alt="Carved Console" loading="lazy"><figcaption><b>Carved Console</b><span>Restored</span></figcaption></figure>
-    <figure class="ph " data-cap="Round Table · Restored"><img src="img/restore-round-table.jpg" alt="Round Table" loading="lazy"><figcaption><b>Round Table</b><span>Restored</span></figcaption></figure>
-    <figure class="ph " data-cap="Lounge Chairs · Restored"><img src="img/restore-lounge-chairs.jpg" alt="Lounge Chairs" loading="lazy"><figcaption><b>Lounge Chairs</b><span>Restored</span></figcaption></figure>
-  </div>
-</section>
-
-<section id="art" class="wrap">
-  <div class="head"><span class="label">Wood &amp; Leather</span><h2>Made for the joy of it.</h2><p>Cutting boards, inlays, turned pieces, carvings and hand-stitched leather. One-offs from the Atelier.</p></div>
-  <div class="art">
-    <figure class="ph " data-cap="End-grain Board · Wood"><img src="img/art-endgrain-board.jpg" alt="End-grain Board" loading="lazy"><figcaption><b>End-grain Board</b><span>Wood</span></figcaption></figure>
-    <figure class="ph " data-cap="Chessboard · Inlay"><img src="img/art-chessboard.jpg" alt="Chessboard" loading="lazy"><figcaption><b>Chessboard</b><span>Inlay</span></figcaption></figure>
-    <figure class="ph " data-cap="Striped Board · Wood"><img src="img/art-striped-board.jpg" alt="Striped Board" loading="lazy"><figcaption><b>Striped Board</b><span>Wood</span></figcaption></figure>
-    <figure class="ph " data-cap="Knife Sheaths · Leather"><img src="img/leather-sheaths.jpg" alt="Knife Sheaths" loading="lazy"><figcaption><b>Knife Sheaths</b><span>Leather</span></figcaption></figure>
-    <figure class="ph " data-cap="Turned Vessel · Wood"><img src="img/art-turned-urn.jpg" alt="Turned Vessel" loading="lazy"><figcaption><b>Turned Vessel</b><span>Wood</span></figcaption></figure>
-    <figure class="ph " data-cap="Carved Pendant · Wood"><img src="img/art-pendant.jpg" alt="Carved Pendant" loading="lazy"><figcaption><b>Carved Pendant</b><span>Wood</span></figcaption></figure>
-    <figure class="ph " data-cap="Side Tables · Furniture"><img src="img/art-side-tables.jpg" alt="Side Tables" loading="lazy"><figcaption><b>Side Tables</b><span>Furniture</span></figcaption></figure>
-    <figure class="ph " data-cap="Butcher-block Bar · Wood"><img src="img/butcher-block-bar.jpg" alt="Butcher-block Bar" loading="lazy"><figcaption><b>Butcher-block Bar</b><span>Wood</span></figcaption></figure>
-  </div>
-  <div class="note"><span>Commissions open. Ask what's available.</span><a class="btn btn-line btn-sm" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20your%20wood%20%26%20leather%20pieces" target="_blank" rel="noopener">Ask about a piece</a></div>
-</section>
-
-<section id="shop" class="wrap">
-  <div class="head"><span class="label">The Shop</span><h2>Three shelves. Pick yours.</h2><p>Everything comes out of Gabriel's own Atelier and collection. Ask on WhatsApp, see it in person, take it home.</p></div>
-  <nav class="index" aria-label="Shop shelves">
-    <a href="#tools"><span><b>Shop Surplus</b><small>Used tools, tested and working</small></span><span class="arr">→</span></a>
-    <a href="#coins"><span><b>Coin Cabinet</b><small>From a collector's own trays</small></span><span class="arr">→</span></a>
-    <a href="#collection" class="prem"><span><b>The Collection</b><small>Antique Chinese chairs</small></span><span class="arr">→</span></a>
+<header class="head">
+  <a class="logo" href="#home" aria-label="Gabriel Ganga Originals, home"><img src="img/seal-black.png" alt="GG Gabriel Ganga Originals"></a>
+  <nav aria-label="Main">
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#shop" data-nav="shop">Shop</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <div class="shelf" id="tools">
-    <div class="shelf-head"><h3>Shop Surplus</h3><span>For woodworkers &amp; DIY</span></div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section data-view="home">
+    <div class="hero">
+      <img src="img/hero-blue-fireplace.jpg" alt="Navy living room with oak floating shelves and stone fireplace">
+      <div class="cap">
+        <img src="img/seal-white.png" alt="">
+        <h1>Custom woodwork by hand</h1>
+        <p>26 years · South Florida · Direct with the maker</p>
+      </div>
+    </div>
+    <div class="doors">
+      <a class="door" href="#work"><img src="img/keys-kitchen-wide.jpg" alt=""><b>Work</b></a>
+      <a class="door" href="#restorations"><img src="img/restore-chinoiserie-chair.jpg" alt=""><b>Restorations</b></a>
+      <a class="door" href="#art"><img src="img/art-chessboard.jpg" alt=""><b>Art</b></a>
+      <a class="door" href="#shop"><img src="img/chinese-chair-1.jpg" alt=""><b>Shop</b></a>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section data-view="work" class="page" hidden>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)">Custom furniture</span><h1>Work</h1><p>Kitchens, libraries, wall units and stairs. Measured, built, finished and installed by Gabriel.</p></div>
     <div class="grid">
-      <div class="item"><div class="slot">Photo coming</div><b>Table saw</b><div class="row"><span class="cond">Used</span><span class="price">$ —</span></div></div>
-      <div class="item"><div class="slot">Photo coming</div><b>Clamp set</b><div class="row"><span class="cond">Used · lot</span><span class="price">$ —</span></div></div>
-      <div class="item"><div class="slot">Photo coming</div><b>Router + bits</b><div class="row"><span class="cond">Used</span><span class="price">$ —</span></div></div>
-      <div class="item"><div class="slot">Photo coming</div><b>Hand planes</b><div class="row"><span class="cond">Used</span><span class="price">$ —</span></div></div>
+      <figure class="wide"><button type="button"><img src="img/keys-kitchen-wide.jpg" alt="Turquoise kitchen, Florida Keys" loading="lazy"></button><figcaption>Turquoise Kitchen · Florida Keys</figcaption></figure>
+      <figure><button type="button"><img src="img/keys-kitchen-island.jpg" alt="Waterfall island" loading="lazy"></button><figcaption>Waterfall Island</figcaption></figure>
+      <figure><button type="button"><img src="img/keys-kitchen-appliances.jpg" alt="Appliance wall" loading="lazy"></button><figcaption>Appliance Wall</figcaption></figure>
+      <figure><button type="button"><img src="img/blue-library.jpg" alt="Blue library" loading="lazy"></button><figcaption>Blue Library</figcaption></figure>
+      <figure><button type="button"><img src="img/walnut-entertainment.jpg" alt="Walnut media wall" loading="lazy"></button><figcaption>Walnut Media Wall</figcaption></figure>
+      <figure><button type="button"><img src="img/white-tv-wall.jpg" alt="White wall unit" loading="lazy"></button><figcaption>White Wall Unit</figcaption></figure>
+      <figure><button type="button"><img src="img/backlit-bookcase.jpg" alt="Lit bookcase" loading="lazy"></button><figcaption>Lit Bookcase</figcaption></figure>
+      <figure><button type="button"><img src="img/spiral-stair.jpg" alt="Spiral staircase" loading="lazy"></button><figcaption>Spiral Staircase</figcaption></figure>
+      <figure><button type="button"><img src="img/floating-stairs.jpg" alt="Floating treads" loading="lazy"></button><figcaption>Floating Treads</figcaption></figure>
+      <figure><button type="button"><img src="img/oak-library.jpg" alt="Oak library" loading="lazy"></button><figcaption>Oak Library</figcaption></figure>
+      <figure><button type="button"><img src="img/modern-kitchen.jpg" alt="Modern kitchen" loading="lazy"></button><figcaption>Modern Kitchen</figcaption></figure>
+      <figure><button type="button"><img src="img/pergola-lake.jpg" alt="Lakeside pergola" loading="lazy"></button><figcaption>Lakeside Pergola</figcaption></figure>
+      <figure><button type="button"><img src="img/closet.jpg" alt="Walk-in closet" loading="lazy"></button><figcaption>Walk-in Closet</figcaption></figure>
+      <figure><button type="button"><img src="img/vanity.jpg" alt="Floating vanity" loading="lazy"></button><figcaption>Floating Vanity</figcaption></figure>
+      <figure><button type="button"><img src="img/barn-door.jpg" alt="Barn door" loading="lazy"></button><figcaption>Barn Door</figcaption></figure>
+      <figure><button type="button"><img src="img/ceiling-beams.jpg" alt="Coffered ceiling" loading="lazy"></button><figcaption>Coffered Ceiling</figcaption></figure>
     </div>
-    <div class="note"><span>Pickup at the Atelier in South Florida.</span><a class="btn btn-line btn-sm" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20a%20tool%20from%20your%20shop" target="_blank" rel="noopener">Ask about a tool</a></div>
-  </div>
-  <div class="shelf" id="coins">
-    <div class="shelf-head"><h3>Coin Cabinet</h3><span>For collectors</span></div>
-    <div class="coins">
-      <div class="coin"><i class="silver"></i><b>Silver</b><span>Year · grade</span></div><div class="coin"><i class="gold"></i><b>Gold</b><span>Year · grade</span></div><div class="coin"><i class="copper"></i><b>Copper</b><span>Year · grade</span></div>
-      <div class="coin"><i class="silver"></i><b>Silver</b><span>Year · grade</span></div><div class="coin"><i class="copper"></i><b>Copper</b><span>Year · grade</span></div><div class="coin"><i class="gold"></i><b>Gold</b><span>Year · grade</span></div>
+  </section>
+
+  <!-- RESTORATIONS -->
+  <section data-view="restorations" class="page" hidden>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)">Antiques brought back</span><h1>Restorations</h1><p>Old pieces repaired, refinished and returned to use, keeping what makes them original.</p></div>
+    <div class="grid">
+      <figure class="wide"><button type="button"><img src="img/gabriel-restoring.jpg" alt="Gabriel restoring a chinoiserie chair" loading="lazy"></button><figcaption>In the Atelier</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-chinoiserie-chair.jpg" alt="Chinoiserie chair" loading="lazy"></button><figcaption>Chinoiserie Chair</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-carved-console.jpg" alt="Carved console" loading="lazy"></button><figcaption>Carved Console</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-round-table.jpg" alt="Round table" loading="lazy"></button><figcaption>Round Table</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-lounge-chairs.jpg" alt="Lounge chairs" loading="lazy"></button><figcaption>Lounge Chairs</figcaption></figure>
     </div>
-    <div class="note"><span>Each coin listed with country, year, grade and price.</span><a class="btn btn-line btn-sm" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20your%20coins" target="_blank" rel="noopener">Ask about a coin</a></div>
-  </div>
-</section>
+  </section>
 
-<div class="vault" id="collection"><div class="wrap">
-  <span class="label">The Collection</span>
-  <div class="lotwrap">
-    <div class="lot">
-      <div class="imgs"><figure class="ph big" data-cap=""><img src="img/chinese-chair-1.jpg" alt="Pair of antique Chinese yoke-back armchairs" loading="lazy"></figure><figure class="ph sm" data-cap=""><img src="img/chinese-chair-2.jpg" alt="Carved splat detail" loading="lazy"></figure><figure class="ph sm" data-cap=""><img src="img/chinese-chair-3.jpg" alt="Carved splat detail, second chair" loading="lazy"></figure></div>
+  <!-- ART -->
+  <section data-view="art" class="page" hidden>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)">Wood, lathe &amp; leather</span><h1>Art</h1><p>Pieces made without a deadline: turned vessels, boards, carvings and hand-stitched leather.</p></div>
+    <div class="grid">
+      <figure><button type="button"><img src="img/art-chessboard.jpg" alt="Chessboard" loading="lazy"></button><figcaption>Chessboard</figcaption></figure>
+      <figure><button type="button"><img src="img/art-turned-urn.jpg" alt="Turned vessel" loading="lazy"></button><figcaption>Turned Vessel</figcaption></figure>
+      <figure><button type="button"><img src="img/art-endgrain-board.jpg" alt="End-grain board" loading="lazy"></button><figcaption>End-grain Board</figcaption></figure>
+      <figure><button type="button"><img src="img/art-striped-board.jpg" alt="Striped board" loading="lazy"></button><figcaption>Striped Board</figcaption></figure>
+      <figure><button type="button"><img src="img/leather-sheaths.jpg" alt="Knife sheaths" loading="lazy"></button><figcaption>Knife Sheaths</figcaption></figure>
+      <figure><button type="button"><img src="img/art-pendant.jpg" alt="Carved pendant" loading="lazy"></button><figcaption>Carved Pendant</figcaption></figure>
+      <figure><button type="button"><img src="img/art-side-tables.jpg" alt="Side tables" loading="lazy"></button><figcaption>Side Tables</figcaption></figure>
+      <figure><button type="button"><img src="img/butcher-block-bar.jpg" alt="Butcher-block bar" loading="lazy"></button><figcaption>Butcher-block Bar</figcaption></figure>
     </div>
-    <div style="display:grid;gap:18px">
-      <h3>Pieces with a past.</h3>
-      <p>A pair of antique Chinese yoke-back armchairs with hand-carved splats. Shown by private appointment in South Florida.</p>
-      <div class="lot"><div class="meta"><b>Antique Chinese armchair</b><span>$1,500 each</span></div><small>Pair available · Original finish</small></div>
-      <div><a class="btn btn-gold" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27d%20like%20a%20private%20viewing%20of%20the%20antique%20Chinese%20chairs" target="_blank" rel="noopener">Request a private viewing</a></div>
+  </section>
+
+  <!-- SHOP -->
+  <section data-view="shop" class="page" hidden>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)">From the Atelier</span><h1>Shop</h1><p>Everything comes from Gabriel's own Atelier and collection. Ask on WhatsApp, see it in person, take it home.</p></div>
+    <div class="shelf">
+      <h2>The Collection <small>Antique Chinese chairs</small></h2>
+      <div class="grid">
+        <figure class="wide"><button type="button"><img src="img/chinese-chair-1.jpg" alt="Pair of antique Chinese yoke-back armchairs" loading="lazy"></button></figure>
+        <figure><button type="button"><img src="img/chinese-chair-2.jpg" alt="Carved splat detail" loading="lazy"></button></figure>
+        <figure><button type="button"><img src="img/chinese-chair-3.jpg" alt="Carved splat detail, second chair" loading="lazy"></button></figure>
+      </div>
+      <div class="lot"><b>Antique Chinese armchair</b><span>$1,500 each</span></div>
+      <div class="tiny" style="color:var(--mute)">Pair available · Original finish · Private viewing</div>
+      <div><a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20the%20Chinese%20chairs" target="_blank" rel="noopener">Request a viewing</a></div>
     </div>
-  </div>
-</div></div>
-
-<section id="buy" class="wrap">
-  <div class="head"><span class="label">How buying works</span><h2>Simple. Face to face.</h2></div>
-  <ol class="steps">
-    <li><div><b>Message on WhatsApp</b><span>Tell Gabriel what caught your eye.</span></div></li>
-    <li><div><b>See it in person</b><span>Visit the Atelier and check the piece yourself.</span></div></li>
-    <li><div><b>Take it home</b><span>Pay on pickup and leave with it.</span></div></li>
-  </ol>
-</section>
-
-<section id="about" class="wrap"><div class="about">
-  <figure class="ph " data-cap=""><img src="img/gabriel-restoring.jpg" alt="Gabriel restoring a chinoiserie chair in his Atelier" loading="lazy"></figure>
-  <div style="display:grid;gap:16px"><span class="label">The Maker</span><h2>Born in Argentina. 26 years in South Florida.</h2>
-  <p>Gabriel works mostly by hand in his own Atelier. He measures, builds, finishes and installs each piece himself, so the person who quotes your project is the person who signs it.</p></div>
-</div></section>
-
-<footer class="contact" id="contact"><div class="wrap">
-  <svg class="seal big-seal" role="img" aria-label="GG Gabriel Ganga Originals seal"><use href="#seal"/></svg>
-  <span class="label">Contact</span><h2>Have a project?</h2>
-  <div class="phone">(786) 413-6087</div>
-  <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener">WhatsApp</a><button class="btn btn-ghost-light" id="copyPhone" type="button">Copy number</button></div>
-  <div class="socials"><a href="https://www.instagram.com/gabrielganga.wood.n.art" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@gabrielganga1967" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@gabrielganga3802" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/search/top?q=Wood%20N%20Art%20by%20Gabriel%20Ganga" target="_blank" rel="noopener">Facebook</a></div>
-  <p class="fine">© 2026 Gabriel Ganga Originals · Wood 'N Art · South Florida</p>
-</div></footer>
+    <div class="shelf">
+      <h2>Tools <small>Used shop tools</small></h2>
+      <div class="soon">New listings are being photographed. Ask what is available today.<a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20what%20tools%20do%20you%20have%3F" target="_blank" rel="noopener">Ask about tools</a></div>
+    </div>
+    <div class="shelf">
+      <h2>Coins <small>Numismatic collection</small></h2>
+      <div class="soon">Selected coins from a private collection. Ask for the current list.<a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27d%20like%20to%20see%20your%20coins" target="_blank" rel="noopener">Ask about coins</a></div>
+    </div>
+  </section>
 </main>
-<div class="float"><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>WhatsApp Gabriel</a></div>
-<div class="lb" id="lb" hidden><button type="button" id="lbClose">Close</button><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>
+
+<footer class="foot" id="contact">
+  <img class="s" src="img/seal-black.png" alt="">
+  <span class="tiny" style="color:var(--mute)">Have a project?</span>
+  <div class="ph" id="phone">(786) 413-6087</div>
+  <div class="row">
+    <a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="btn" id="copyPhone" type="button">Copy number</button>
+  </div>
+  <div class="socials">
+    <a href="https://www.instagram.com/gabrielganga.wood.n.art" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@gabrielganga1967" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.youtube.com/@gabrielganga3802" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.facebook.com/search/top?q=Wood%20N%20Art%20by%20Gabriel%20Ganga" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <p class="fine">© 2026 Gabriel Ganga Originals · Wood 'N Art · South Florida</p>
+</footer>
+
+<div class="float"><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener">WhatsApp Gabriel</a></div>
+
+<div class="lb" id="lb" hidden><img id="lbImg" alt=""><button class="btn" type="button" id="lbClose">Close</button></div>
+
 <script>
-document.getElementById('copyPhone').addEventListener('click',function(){var b=this;function sel(){var r=document.createRange();r.selectNodeContents(document.querySelector('.phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);}function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy number'},1600)}try{navigator.clipboard.writeText('(786) 413-6087').then(done).catch(sel)}catch(e){sel()}});
-var lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
-document.querySelectorAll('.ph').forEach(function(f){f.addEventListener('click',function(){var i=f.querySelector('img');li.src=i.src;li.alt=i.alt;lc.textContent=f.dataset.cap||'';lb.hidden=false})});
-function close(){lb.hidden=true}document.getElementById('lbClose').onclick=close;lb.addEventListener('click',function(e){if(e.target===lb)close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+var views=['home','work','restorations','art','shop'];
+function show(){
+  var h=(location.hash||'#home').slice(1);
+  if(h==='contact'){return;}
+  if(views.indexOf(h)<0)h='home';
+  document.querySelectorAll('[data-view]').forEach(function(s){s.hidden=s.dataset.view!==h;});
+  document.querySelectorAll('[data-nav]').forEach(function(a){a.toggleAttribute('aria-current',a.dataset.nav===h);if(a.dataset.nav===h)a.setAttribute('aria-current','page');});
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',show);show();
+
+var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.grid button').forEach(function(b){b.addEventListener('click',function(){var i=b.querySelector('img');lbImg.src=i.src;lbImg.alt=i.alt;lb.hidden=false;});});
+function closeLb(){lb.hidden=true;lbImg.removeAttribute('src');}
+document.getElementById('lbClose').addEventListener('click',closeLb);
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLb();});
+
+document.getElementById('copyPhone').addEventListener('click',function(){
+  var b=this;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy number';},1600);}
+  try{navigator.clipboard.writeText('(786) 413-6087').then(done).catch(sel);}catch(e){sel();}
+});
 </script>
+
+</body>
+</html>
