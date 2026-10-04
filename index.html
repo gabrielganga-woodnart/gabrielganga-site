@@ -96,6 +96,26 @@ img{display:block}
 .lb img{max-width:100%;max-height:86vh;object-fit:contain}
 .lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;color:#fff;border-color:#fff;padding:10px 14px}
 
+
+/* language toggle */
+.lang{border:1.5px solid var(--ink);background:transparent;color:var(--ink);padding:6px 9px;font-weight:600;font-size:12px;letter-spacing:.1em;cursor:pointer;border-radius:0}
+.head .right{display:flex;align-items:center;gap:16px}
+
+/* process + maker (home) */
+.band{padding:40px 16px;max-width:1200px;margin:0 auto;display:grid;gap:18px}
+.band h2{margin:0;font-weight:700;font-size:clamp(26px,7vw,44px);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.band p{margin:0;max-width:52ch;color:var(--mute);font-size:16px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.steps figure{margin:0;min-width:0}
+.steps img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--soft)}
+.steps figcaption{padding-top:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.steps figcaption span{display:block;color:var(--gold);font-variant-numeric:tabular-nums}
+.maker{display:grid;gap:18px;align-items:center;border-top:1px solid var(--line)}
+.maker img{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover}
+.maker ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px;font-weight:500}
+.maker li::before{content:"— ";color:var(--gold)}
+@media (min-width:900px){.maker{grid-template-columns:420px 1fr;gap:40px}}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -104,11 +124,14 @@ img{display:block}
 
 <header class="head">
   <a class="logo" href="#home" aria-label="Gabriel Ganga Originals, home"><img src="img/seal-black.png" alt="GG Gabriel Ganga Originals"></a>
+  <div class="right">
   <nav aria-label="Main">
-    <a href="#work" data-nav="work">Work</a>
-    <a href="#shop" data-nav="shop">Shop</a>
-    <a href="#contact">Contact</a>
+    <a href="#work" data-nav="work" data-i18n="nav_work">Work</a>
+    <a href="#shop" data-nav="shop" data-i18n="nav_shop">Shop</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
   </nav>
+  <button class="lang" id="langBtn" type="button" aria-label="Cambiar a español">ES</button>
+  </div>
 </header>
 
 <main>
@@ -118,113 +141,166 @@ img{display:block}
       <img src="img/hero-blue-fireplace.jpg" alt="Navy living room with oak floating shelves and stone fireplace">
       <div class="cap">
         <img src="img/seal-white.png" alt="">
-        <h1>Custom woodwork by hand</h1>
-        <p>26 years · South Florida · Direct with the maker</p>
+        <h1 data-i18n="hero_h">Custom woodwork by hand</h1>
+        <p data-i18n="hero_p">26 years · South Florida · Direct with the maker</p>
       </div>
     </div>
     <div class="doors">
-      <a class="door" href="#work"><img src="img/keys-kitchen-wide.jpg" alt=""><b>Work</b></a>
-      <a class="door" href="#restorations"><img src="img/restore-chinoiserie-chair.jpg" alt=""><b>Restorations</b></a>
-      <a class="door" href="#art"><img src="img/art-chessboard.jpg" alt=""><b>Art</b></a>
-      <a class="door" href="#shop"><img src="img/chinese-chair-1.jpg" alt=""><b>Shop</b></a>
+      <a class="door" href="#work"><img src="img/keys-kitchen-wide.jpg" alt=""><b data-i18n="door_work">Work</b></a>
+      <a class="door" href="#restorations"><img src="img/restore-chinoiserie-chair.jpg" alt=""><b data-i18n="door_rest">Restorations</b></a>
+      <a class="door" href="#art"><img src="img/art-chessboard.jpg" alt=""><b data-i18n="door_art">Art</b></a>
+      <a class="door" href="#shop"><img src="img/chinese-chair-1.jpg" alt=""><b data-i18n="door_shop">Shop</b></a>
+    </div>
+
+    <div class="band">
+      <span class="tiny" style="color:var(--mute)" data-i18n="proc_k">How a job comes together</span>
+      <h2 data-i18n="proc_h">From empty wall to finished room</h2>
+      <p data-i18n="proc_p">Caldera Law, Miami. Built in the Atelier, installed and finished on site by Gabriel.</p>
+      <div class="steps">
+        <figure><img src="img/caldera-step1.jpg" alt="Cabinet boxes installed, no doors" loading="lazy"><figcaption><span>01</span><b data-i18n="st1">Boxes</b></figcaption></figure>
+        <figure><img src="img/caldera-step2.jpg" alt="High-gloss doors installed" loading="lazy"><figcaption><span>02</span><b data-i18n="st2">Doors</b></figcaption></figure>
+        <figure><img src="img/caldera-kitchenette.jpg" alt="Finished kitchenette with stone backsplash" loading="lazy"><figcaption><span>03</span><b data-i18n="st3">Finished</b></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="band maker">
+      <img src="img/gabriel-onsite.jpg" alt="Gabriel Ganga on site in front of a kitchenette he built" loading="lazy">
+      <div style="display:grid;gap:16px;min-width:0">
+        <span class="tiny" style="color:var(--mute)" data-i18n="mk_k">The maker</span>
+        <h2 data-i18n="mk_h">Gabriel Ganga</h2>
+        <p data-i18n="mk_p">Born in Argentina, building fine furniture in South Florida for 26 years. Most of the work is done by hand in his own Atelier.</p>
+        <ul>
+          <li data-i18n="mk_1">You talk to the person who builds it</li>
+          <li data-i18n="mk_2">He measures, builds, finishes and installs</li>
+          <li data-i18n="mk_3">Every piece leaves signed with the GG seal</li>
+        </ul>
+        <div><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener" data-i18n="mk_cta">Talk to Gabriel</a></div>
+      </div>
     </div>
   </section>
 
   <!-- WORK -->
   <section data-view="work" class="page" hidden>
-    <div class="page-top"><span class="tiny" style="color:var(--mute)">Custom furniture</span><h1>Work</h1><p>Kitchens, libraries, wall units and stairs. Measured, built, finished and installed by Gabriel.</p></div>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)" data-i18n="t1">Custom furniture</span><h1 data-i18n="t2">Work</h1><p data-i18n="t3">Kitchens, libraries, wall units and stairs. Measured, built, finished and installed by Gabriel.</p></div>
     <div class="grid">
-      <figure class="wide"><button type="button"><img src="img/keys-kitchen-wide.jpg" alt="Turquoise kitchen, Florida Keys" loading="lazy"></button><figcaption>Turquoise Kitchen · Florida Keys</figcaption></figure>
-      <figure><button type="button"><img src="img/keys-kitchen-island.jpg" alt="Waterfall island" loading="lazy"></button><figcaption>Waterfall Island</figcaption></figure>
-      <figure><button type="button"><img src="img/keys-kitchen-appliances.jpg" alt="Appliance wall" loading="lazy"></button><figcaption>Appliance Wall</figcaption></figure>
-      <figure><button type="button"><img src="img/blue-library.jpg" alt="Blue library" loading="lazy"></button><figcaption>Blue Library</figcaption></figure>
-      <figure><button type="button"><img src="img/walnut-entertainment.jpg" alt="Walnut media wall" loading="lazy"></button><figcaption>Walnut Media Wall</figcaption></figure>
-      <figure><button type="button"><img src="img/white-tv-wall.jpg" alt="White wall unit" loading="lazy"></button><figcaption>White Wall Unit</figcaption></figure>
-      <figure><button type="button"><img src="img/backlit-bookcase.jpg" alt="Lit bookcase" loading="lazy"></button><figcaption>Lit Bookcase</figcaption></figure>
-      <figure><button type="button"><img src="img/spiral-stair.jpg" alt="Spiral staircase" loading="lazy"></button><figcaption>Spiral Staircase</figcaption></figure>
-      <figure><button type="button"><img src="img/floating-stairs.jpg" alt="Floating treads" loading="lazy"></button><figcaption>Floating Treads</figcaption></figure>
-      <figure><button type="button"><img src="img/oak-library.jpg" alt="Oak library" loading="lazy"></button><figcaption>Oak Library</figcaption></figure>
-      <figure><button type="button"><img src="img/modern-kitchen.jpg" alt="Modern kitchen" loading="lazy"></button><figcaption>Modern Kitchen</figcaption></figure>
-      <figure><button type="button"><img src="img/pergola-lake.jpg" alt="Lakeside pergola" loading="lazy"></button><figcaption>Lakeside Pergola</figcaption></figure>
-      <figure><button type="button"><img src="img/closet.jpg" alt="Walk-in closet" loading="lazy"></button><figcaption>Walk-in Closet</figcaption></figure>
-      <figure><button type="button"><img src="img/vanity.jpg" alt="Floating vanity" loading="lazy"></button><figcaption>Floating Vanity</figcaption></figure>
-      <figure><button type="button"><img src="img/barn-door.jpg" alt="Barn door" loading="lazy"></button><figcaption>Barn Door</figcaption></figure>
-      <figure><button type="button"><img src="img/ceiling-beams.jpg" alt="Coffered ceiling" loading="lazy"></button><figcaption>Coffered Ceiling</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/caldera-kitchenette.jpg" alt="Office kitchenette, Caldera Law" loading="lazy"></button><figcaption data-i18n="c_caldera">Office Kitchenette · Caldera Law</figcaption></figure>
+      <figure><button type="button"><img src="img/cutler-green-desk.jpg" alt="Green study built-ins with desk" loading="lazy"></button><figcaption data-i18n="c_cutler1">Green Study · Cutler Bay</figcaption></figure>
+      <figure><button type="button"><img src="img/cutler-green-sofa.jpg" alt="Green study shelves" loading="lazy"></button><figcaption data-i18n="c_cutler2">Green Study Shelves</figcaption></figure>
+      <figure><button type="button"><img src="img/walnut-column.jpg" alt="Walnut-clad double-height column" loading="lazy"></button><figcaption data-i18n="c_col1">Walnut Column</figcaption></figure>
+      <figure><button type="button"><img src="img/walnut-column-chandelier.jpg" alt="Walnut column with vent panel" loading="lazy"></button><figcaption data-i18n="c_col2">Walnut Column · Vent Panel</figcaption></figure>
+      <figure><button type="button"><img src="img/art-pedestal-niche.jpg" alt="Oak art pedestal in a lit niche" loading="lazy"></button><figcaption data-i18n="c_ped1">Art Pedestal</figcaption></figure>
+      <figure><button type="button"><img src="img/art-pedestal-drawer.jpg" alt="Oak pedestal with open drawer" loading="lazy"></button><figcaption data-i18n="c_ped2">Art Pedestal · Hidden Drawer</figcaption></figure>
+      <figure><button type="button"><img src="img/ruthie-vanity.jpg" alt="Rift oak shaker vanity" loading="lazy"></button><figcaption data-i18n="c_ruth1">Oak Shaker Vanity</figcaption></figure>
+      <figure><button type="button"><img src="img/ruthie-vanity-top.jpg" alt="Oak vanity with quartz top" loading="lazy"></button><figcaption data-i18n="c_ruth2">Oak Vanity · Quartz Top</figcaption></figure>
+      <figure><button type="button"><img src="img/caldera-angle.jpg" alt="Kitchenette with island" loading="lazy"></button><figcaption data-i18n="c_caldera2">Kitchenette · Side View</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/oak-slat-wall-wide.jpg" alt="White oak slat wall with open shelving" loading="lazy"></button><figcaption data-i18n="n_oak1">Oak Slat Wall · Living Room</figcaption></figure>
+      <figure><button type="button"><img src="img/oak-slat-wall.jpg" alt="White oak slat wall" loading="lazy"></button><figcaption data-i18n="n_oak2">Oak Slat Wall</figcaption></figure>
+      <figure><button type="button"><img src="img/grey-media-wall-beams.jpg" alt="Grey media wall with shelves" loading="lazy"></button><figcaption data-i18n="n_grey2">Grey Media Wall</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/grey-media-wall.jpg" alt="Grey media wall with ceiling beams" loading="lazy"></button><figcaption data-i18n="n_grey1">Media Wall + Ceiling Beams</figcaption></figure>
+      <figure><button type="button"><img src="img/white-closet.jpg" alt="White walk-in closet" loading="lazy"></button><figcaption data-i18n="n_clo1">White Walk-in Closet</figcaption></figure>
+      <figure><button type="button"><img src="img/white-closet-island.jpg" alt="Walk-in closet with island" loading="lazy"></button><figcaption data-i18n="n_clo2">Closet Island</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/rooftop-deck.jpg" alt="Ipe rooftop deck with raised platform" loading="lazy"></button><figcaption data-i18n="n_deck1">Rooftop Deck</figcaption></figure>
+      <figure><button type="button"><img src="img/rooftop-deck-2.jpg" alt="Rooftop deck boards" loading="lazy"></button><figcaption data-i18n="n_deck2">Rooftop Deck · Detail</figcaption></figure>
+      <figure><button type="button"><img src="img/walnut-wainscot.jpg" alt="Walnut wainscot panels" loading="lazy"></button><figcaption data-i18n="n_wain">Walnut Wainscot</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/keys-kitchen-wide.jpg" alt="Turquoise kitchen, Florida Keys" loading="lazy"></button><figcaption data-i18n="t4">Turquoise Kitchen · Florida Keys</figcaption></figure>
+      <figure><button type="button"><img src="img/keys-kitchen-island.jpg" alt="Waterfall island" loading="lazy"></button><figcaption data-i18n="t5">Waterfall Island</figcaption></figure>
+      <figure><button type="button"><img src="img/keys-kitchen-appliances.jpg" alt="Appliance wall" loading="lazy"></button><figcaption data-i18n="t6">Appliance Wall</figcaption></figure>
+      <figure><button type="button"><img src="img/blue-library.jpg" alt="Blue library" loading="lazy"></button><figcaption data-i18n="t7">Blue Library</figcaption></figure>
+      <figure><button type="button"><img src="img/walnut-entertainment.jpg" alt="Walnut media wall" loading="lazy"></button><figcaption data-i18n="t8">Walnut Media Wall</figcaption></figure>
+      <figure><button type="button"><img src="img/white-tv-wall.jpg" alt="White wall unit" loading="lazy"></button><figcaption data-i18n="t9">White Wall Unit</figcaption></figure>
+      <figure><button type="button"><img src="img/backlit-bookcase.jpg" alt="Lit bookcase" loading="lazy"></button><figcaption data-i18n="t10">Lit Bookcase</figcaption></figure>
+      <figure><button type="button"><img src="img/spiral-stair.jpg" alt="Spiral staircase" loading="lazy"></button><figcaption data-i18n="t11">Spiral Staircase</figcaption></figure>
+      <figure><button type="button"><img src="img/floating-stairs.jpg" alt="Floating treads" loading="lazy"></button><figcaption data-i18n="t12">Floating Treads</figcaption></figure>
+      <figure><button type="button"><img src="img/oak-library.jpg" alt="Oak library" loading="lazy"></button><figcaption data-i18n="t13">Oak Library</figcaption></figure>
+      <figure><button type="button"><img src="img/modern-kitchen.jpg" alt="Modern kitchen" loading="lazy"></button><figcaption data-i18n="t14">Modern Kitchen</figcaption></figure>
+      <figure><button type="button"><img src="img/pergola-lake.jpg" alt="Lakeside pergola" loading="lazy"></button><figcaption data-i18n="t15">Lakeside Pergola</figcaption></figure>
+      <figure><button type="button"><img src="img/closet.jpg" alt="Walk-in closet" loading="lazy"></button><figcaption data-i18n="t16">Walk-in Closet</figcaption></figure>
+      <figure><button type="button"><img src="img/vanity.jpg" alt="Floating vanity" loading="lazy"></button><figcaption data-i18n="t17">Floating Vanity</figcaption></figure>
+      <figure><button type="button"><img src="img/barn-door.jpg" alt="Barn door" loading="lazy"></button><figcaption data-i18n="t18">Barn Door</figcaption></figure>
+      <figure><button type="button"><img src="img/ceiling-beams.jpg" alt="Coffered ceiling" loading="lazy"></button><figcaption data-i18n="t19">Coffered Ceiling</figcaption></figure>
     </div>
   </section>
 
   <!-- RESTORATIONS -->
   <section data-view="restorations" class="page" hidden>
-    <div class="page-top"><span class="tiny" style="color:var(--mute)">Antiques brought back</span><h1>Restorations</h1><p>Old pieces repaired, refinished and returned to use, keeping what makes them original.</p></div>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)" data-i18n="t20">Antiques brought back</span><h1 data-i18n="t21">Restorations</h1><p data-i18n="t22">Old pieces repaired, refinished and returned to use, keeping what makes them original.</p></div>
     <div class="grid">
-      <figure class="wide"><button type="button"><img src="img/gabriel-restoring.jpg" alt="Gabriel restoring a chinoiserie chair" loading="lazy"></button><figcaption>In the Atelier</figcaption></figure>
-      <figure><button type="button"><img src="img/restore-chinoiserie-chair.jpg" alt="Chinoiserie chair" loading="lazy"></button><figcaption>Chinoiserie Chair</figcaption></figure>
-      <figure><button type="button"><img src="img/restore-carved-console.jpg" alt="Carved console" loading="lazy"></button><figcaption>Carved Console</figcaption></figure>
-      <figure><button type="button"><img src="img/restore-round-table.jpg" alt="Round table" loading="lazy"></button><figcaption>Round Table</figcaption></figure>
-      <figure><button type="button"><img src="img/restore-lounge-chairs.jpg" alt="Lounge chairs" loading="lazy"></button><figcaption>Lounge Chairs</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/gabriel-restoring.jpg" alt="Gabriel restoring a chinoiserie chair" loading="lazy"></button><figcaption data-i18n="t23">In the Atelier</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-chinoiserie-chair.jpg" alt="Chinoiserie chair" loading="lazy"></button><figcaption data-i18n="t24">Chinoiserie Chair</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-carved-console.jpg" alt="Carved console" loading="lazy"></button><figcaption data-i18n="t25">Carved Console</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-round-table.jpg" alt="Round table" loading="lazy"></button><figcaption data-i18n="t26">Round Table</figcaption></figure>
+      <figure><button type="button"><img src="img/restore-lounge-chairs.jpg" alt="Lounge chairs" loading="lazy"></button><figcaption data-i18n="t27">Lounge Chairs</figcaption></figure>
     </div>
   </section>
 
   <!-- ART -->
   <section data-view="art" class="page" hidden>
-    <div class="page-top"><span class="tiny" style="color:var(--mute)">Wood, lathe &amp; leather</span><h1>Art</h1><p>Pieces made without a deadline: turned vessels, boards, carvings and hand-stitched leather.</p></div>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)" data-i18n="t28">Wood, lathe &amp; leather</span><h1 data-i18n="t29">Art</h1><p data-i18n="t30">Pieces made without a deadline: turned vessels, boards, carvings and hand-stitched leather.</p></div>
     <div class="grid">
-      <figure><button type="button"><img src="img/art-chessboard.jpg" alt="Chessboard" loading="lazy"></button><figcaption>Chessboard</figcaption></figure>
-      <figure><button type="button"><img src="img/art-turned-urn.jpg" alt="Turned vessel" loading="lazy"></button><figcaption>Turned Vessel</figcaption></figure>
-      <figure><button type="button"><img src="img/art-endgrain-board.jpg" alt="End-grain board" loading="lazy"></button><figcaption>End-grain Board</figcaption></figure>
-      <figure><button type="button"><img src="img/art-striped-board.jpg" alt="Striped board" loading="lazy"></button><figcaption>Striped Board</figcaption></figure>
-      <figure><button type="button"><img src="img/leather-sheaths.jpg" alt="Knife sheaths" loading="lazy"></button><figcaption>Knife Sheaths</figcaption></figure>
-      <figure><button type="button"><img src="img/art-pendant.jpg" alt="Carved pendant" loading="lazy"></button><figcaption>Carved Pendant</figcaption></figure>
-      <figure><button type="button"><img src="img/art-side-tables.jpg" alt="Side tables" loading="lazy"></button><figcaption>Side Tables</figcaption></figure>
-      <figure><button type="button"><img src="img/butcher-block-bar.jpg" alt="Butcher-block bar" loading="lazy"></button><figcaption>Butcher-block Bar</figcaption></figure>
+      <figure class="wide"><button type="button"><img src="img/yin-yang-table.jpg" alt="Yin yang dining table" loading="lazy"></button><figcaption data-i18n="n_yy">Yin Yang Table</figcaption></figure>
+      <figure><button type="button"><img src="img/mate-bombilla.jpg" alt="Turned Argentine mate with bombilla" loading="lazy"></button><figcaption data-i18n="n_mate1">Argentine Mate</figcaption></figure>
+      <figure><button type="button"><img src="img/mate-striped.jpg" alt="Two-wood turned mate" loading="lazy"></button><figcaption data-i18n="n_mate2">Two-wood Mate</figcaption></figure>
+      <figure><button type="button"><img src="img/turned-plate.jpg" alt="Turned wall plate" loading="lazy"></button><figcaption data-i18n="n_plate1">Turned Wall Plate</figcaption></figure>
+      <figure><button type="button"><img src="img/turned-plate-2.jpg" alt="Turned wall plate" loading="lazy"></button><figcaption data-i18n="n_plate2">Turned Wall Plate</figcaption></figure>
+      <figure><button type="button"><img src="img/checker-board.jpg" alt="End-grain checker cutting board" loading="lazy"></button><figcaption data-i18n="n_board">Checker Cutting Board</figcaption></figure>
+      <figure><button type="button"><img src="img/art-chessboard.jpg" alt="Chessboard" loading="lazy"></button><figcaption data-i18n="t31">Chessboard</figcaption></figure>
+      <figure><button type="button"><img src="img/art-turned-urn.jpg" alt="Turned vessel" loading="lazy"></button><figcaption data-i18n="t32">Turned Vessel</figcaption></figure>
+      <figure><button type="button"><img src="img/art-endgrain-board.jpg" alt="End-grain board" loading="lazy"></button><figcaption data-i18n="t33">End-grain Board</figcaption></figure>
+      <figure><button type="button"><img src="img/art-striped-board.jpg" alt="Striped board" loading="lazy"></button><figcaption data-i18n="t34">Striped Board</figcaption></figure>
+      <figure><button type="button"><img src="img/leather-sheaths.jpg" alt="Knife sheaths" loading="lazy"></button><figcaption data-i18n="t35">Knife Sheaths</figcaption></figure>
+      <figure><button type="button"><img src="img/art-pendant.jpg" alt="Carved pendant" loading="lazy"></button><figcaption data-i18n="t36">Carved Pendant</figcaption></figure>
+      <figure><button type="button"><img src="img/art-side-tables.jpg" alt="Side tables" loading="lazy"></button><figcaption data-i18n="t37">Side Tables</figcaption></figure>
+      <figure><button type="button"><img src="img/butcher-block-bar.jpg" alt="Butcher-block bar" loading="lazy"></button><figcaption data-i18n="t38">Butcher-block Bar</figcaption></figure>
     </div>
   </section>
 
   <!-- SHOP -->
   <section data-view="shop" class="page" hidden>
-    <div class="page-top"><span class="tiny" style="color:var(--mute)">From the Atelier</span><h1>Shop</h1><p>Everything comes from Gabriel's own Atelier and collection. Ask on WhatsApp, see it in person, take it home.</p></div>
+    <div class="page-top"><span class="tiny" style="color:var(--mute)" data-i18n="t39">From the Atelier</span><h1 data-i18n="t40">Shop</h1><p data-i18n="t41">Everything comes from Gabriel's own Atelier and collection. Ask on WhatsApp, see it in person, take it home.</p></div>
     <div class="shelf">
-      <h2>The Collection <small>Antique Chinese chairs</small></h2>
+      <h2><span data-i18n="t50">The Collection</span> <small data-i18n="t51">Antique Chinese chairs</small></h2>
       <div class="grid">
         <figure class="wide"><button type="button"><img src="img/chinese-chair-1.jpg" alt="Pair of antique Chinese yoke-back armchairs" loading="lazy"></button></figure>
         <figure><button type="button"><img src="img/chinese-chair-2.jpg" alt="Carved splat detail" loading="lazy"></button></figure>
         <figure><button type="button"><img src="img/chinese-chair-3.jpg" alt="Carved splat detail, second chair" loading="lazy"></button></figure>
+        <figure><button type="button"><img src="img/chinese-chair-4.jpg" alt="Carved back panel" loading="lazy"></button></figure>
+        <figure><button type="button"><img src="img/chinese-chair-5.jpg" alt="Antique Chinese armchair, full view" loading="lazy"></button></figure>
       </div>
-      <div class="lot"><b>Antique Chinese armchair</b><span>$1,500 each</span></div>
-      <div class="tiny" style="color:var(--mute)">Pair available · Original finish · Private viewing</div>
-      <div><a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20the%20Chinese%20chairs" target="_blank" rel="noopener">Request a viewing</a></div>
+      <div class="lot"><b data-i18n="t42">Antique Chinese armchair</b><span data-i18n="x_price">$1,500 each</span></div>
+      <div class="tiny" style="color:var(--mute)" data-i18n="x_pair">Pair available · Original finish · Private viewing</div>
+      <div><a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27m%20interested%20in%20the%20Chinese%20chairs" target="_blank" rel="noopener" data-i18n="t43">Request a viewing</a></div>
     </div>
     <div class="shelf">
-      <h2>Tools <small>Used shop tools</small></h2>
-      <div class="soon">New listings are being photographed. Ask what is available today.<a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20what%20tools%20do%20you%20have%3F" target="_blank" rel="noopener">Ask about tools</a></div>
+      <h2><span data-i18n="t52">Tools</span> <small data-i18n="t53">Used shop tools</small></h2>
+      <div class="soon"><span data-i18n="t48">New listings are being photographed. Ask what is available today.</span><a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20what%20tools%20do%20you%20have%3F" target="_blank" rel="noopener" data-i18n="t44">Ask about tools</a></div>
     </div>
     <div class="shelf">
-      <h2>Coins <small>Numismatic collection</small></h2>
-      <div class="soon">Selected coins from a private collection. Ask for the current list.<a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27d%20like%20to%20see%20your%20coins" target="_blank" rel="noopener">Ask about coins</a></div>
+      <h2><span data-i18n="t54">Coins</span> <small data-i18n="t55">Numismatic collection</small></h2>
+      <div class="soon"><span data-i18n="t49">Selected coins from a private collection. Ask for the current list.</span><a class="btn" href="https://wa.me/17864136087?text=Hi%20Gabriel%2C%20I%27d%20like%20to%20see%20your%20coins" target="_blank" rel="noopener" data-i18n="t45">Ask about coins</a></div>
     </div>
   </section>
 </main>
 
 <footer class="foot" id="contact">
   <img class="s" src="img/seal-black.png" alt="">
-  <span class="tiny" style="color:var(--mute)">Have a project?</span>
+  <span class="tiny" style="color:var(--mute)" data-i18n="t46">Have a project?</span>
   <div class="ph" id="phone">(786) 413-6087</div>
   <div class="row">
     <a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener">WhatsApp</a>
-    <button class="btn" id="copyPhone" type="button">Copy number</button>
+    <button class="btn" id="copyPhone" type="button" data-i18n="t47">Copy number</button>
   </div>
   <div class="socials">
-    <a href="https://www.instagram.com/gabrielganga.wood.n.art" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.tiktok.com/@gabrielganga1967" target="_blank" rel="noopener">TikTok</a>
-    <a href="https://www.youtube.com/@gabrielganga3802" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/gabrielganga.originals" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@gabrielganga.originals" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.youtube.com/@gabrielganga.originals" target="_blank" rel="noopener">YouTube</a>
     <a href="https://www.facebook.com/search/top?q=Wood%20N%20Art%20by%20Gabriel%20Ganga" target="_blank" rel="noopener">Facebook</a>
   </div>
-  <p class="fine">© 2026 Gabriel Ganga Originals · Wood 'N Art · South Florida</p>
+  <p class="fine" data-i18n="x_fine">© 2026 Gabriel Ganga Originals · Wood 'N Art · South Florida</p>
 </footer>
 
-<div class="float"><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener">WhatsApp Gabriel</a></div>
+<div class="float"><a class="btn btn-wa" href="https://wa.me/17864136087" target="_blank" rel="noopener" data-i18n="x_wa">WhatsApp Gabriel</a></div>
 
-<div class="lb" id="lb" hidden><img id="lbImg" alt=""><button class="btn" type="button" id="lbClose">Close</button></div>
+<div class="lb" id="lb" hidden><img id="lbImg" alt=""><button class="btn" type="button" id="lbClose" data-i18n="x_close">Close</button></div>
 
 <script>
 var views=['home','work','restorations','art','shop'];
@@ -245,10 +321,27 @@ document.getElementById('lbClose').addEventListener('click',closeLb);
 lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLb();});
 
+
+var ES={"n_oak1": "Pared de listones de roble · Living", "n_oak2": "Pared de listones de roble", "n_grey2": "Mueble de TV gris", "n_grey1": "Mueble de TV + vigas en el techo", "n_clo1": "Vestidor blanco", "n_clo2": "Isla del vestidor", "n_deck1": "Deck en la terraza", "n_deck2": "Deck en la terraza · Detalle", "n_wain": "Boiserie de nogal", "n_yy": "Mesa Yin Yang", "n_mate1": "Mate argentino torneado", "n_mate2": "Mate de dos maderas", "n_plate1": "Plato torneado de pared", "n_plate2": "Plato torneado de pared", "n_board": "Tabla de picar ajedrezada","nav_work": "Trabajos", "nav_shop": "Tienda", "nav_contact": "Contacto", "hero_h": "Carpintería a medida, hecha a mano", "hero_p": "26 años · Sur de Florida · Trato directo con el artesano", "door_work": "Trabajos", "door_rest": "Restauraciones", "door_art": "Arte", "door_shop": "Tienda", "proc_k": "Cómo se arma un trabajo", "proc_h": "De la pared vacía al ambiente terminado", "proc_p": "Caldera Law, Miami. Hecho en el Atelier, instalado y terminado en obra por Gabriel.", "st1": "Cajas", "st2": "Puertas", "st3": "Terminado", "mk_k": "El artesano", "mk_h": "Gabriel Ganga", "mk_p": "Nacido en Argentina, hace muebles finos en el sur de Florida desde hace 26 años. Casi todo el trabajo es a mano, en su propio Atelier.", "mk_1": "Hablás con la persona que lo construye", "mk_2": "Él mide, fabrica, termina e instala", "mk_3": "Cada pieza sale firmada con el sello GG", "mk_cta": "Hablar con Gabriel", "t1": "Muebles a medida", "t2": "Trabajos", "t3": "Cocinas, bibliotecas, muebles de pared y escaleras. Medidos, fabricados, terminados e instalados por Gabriel.", "c_caldera": "Kitchenette de oficina · Caldera Law", "c_cutler1": "Estudio verde · Cutler Bay", "c_cutler2": "Estantes del estudio verde", "c_col1": "Columna de nogal", "c_col2": "Columna de nogal · Panel de ventilación", "c_ped1": "Pedestal de arte", "c_ped2": "Pedestal de arte · Cajón oculto", "c_ruth1": "Mueble de baño shaker de roble", "c_ruth2": "Mueble de baño · Mesada de cuarzo", "c_caldera2": "Kitchenette · Vista lateral", "t4": "Cocina turquesa · Cayos de Florida", "t5": "Isla cascada", "t6": "Pared de electrodomésticos", "t7": "Biblioteca azul", "t8": "Mueble de TV en nogal", "t9": "Mueble de pared blanco", "t10": "Biblioteca iluminada", "t11": "Escalera caracol", "t12": "Escalones flotantes", "t13": "Biblioteca de roble", "t14": "Cocina moderna", "t15": "Pérgola junto al lago", "t16": "Vestidor", "t17": "Mueble de baño flotante", "t18": "Puerta corrediza", "t19": "Techo artesonado", "t20": "Antigüedades recuperadas", "t21": "Restauraciones", "t22": "Piezas antiguas reparadas, re-terminadas y devueltas al uso, sin perder lo que las hace originales.", "t23": "En el Atelier", "t24": "Silla chinoiserie", "t25": "Consola tallada", "t26": "Mesa redonda", "t27": "Sillones", "t28": "Madera, torno y cuero", "t29": "Arte", "t30": "Piezas hechas sin apuro: tornería, tablas, tallas y cuero cosido a mano.", "t31": "Tablero de ajedrez", "t32": "Jarrón torneado", "t33": "Tabla end-grain", "t34": "Tabla rayada", "t35": "Fundas para cuchillos", "t36": "Colgante tallado", "t37": "Mesas auxiliares", "t38": "Barra de butcher block", "t39": "Desde el Atelier", "t40": "Tienda", "t41": "Todo sale del Atelier y de la colección de Gabriel. Consultá por WhatsApp, miralo en persona y llevátelo.", "t50": "La Colección", "t51": "Sillas chinas antiguas", "t42": "Sillón chino antiguo", "x_price": "US$1,500 c/u", "x_pair": "Par disponible · Terminación original · Visita privada", "t43": "Pedir una visita", "t52": "Herramientas", "t53": "Herramientas de taller usadas", "t48": "Estamos fotografiando las nuevas. Preguntá qué hay disponible hoy.", "t44": "Consultar herramientas", "t54": "Monedas", "t55": "Colección numismática", "t49": "Monedas seleccionadas de una colección privada. Pedí la lista actual.", "t45": "Consultar monedas", "t46": "¿Tenés un proyecto?", "t47": "Copiar número", "x_wa": "WhatsApp Gabriel", "x_fine": "© 2026 Gabriel Ganga Originals · Wood 'N Art · Sur de Florida", "x_close": "Cerrar"};
+var EN={};document.querySelectorAll('[data-i18n]').forEach(function(e){EN[e.dataset.i18n]=e.innerHTML;});
+var langBtn=document.getElementById('langBtn');
+function setLang(l){
+  var d=l==='es'?ES:EN;
+  document.querySelectorAll('[data-i18n]').forEach(function(e){var v=d[e.dataset.i18n];if(v!=null)e.innerHTML=v;});
+  document.documentElement.lang=l;
+  langBtn.textContent=l==='es'?'EN':'ES';
+  langBtn.setAttribute('aria-label',l==='es'?'Switch to English':'Cambiar a español');
+  try{localStorage.setItem('gg_lang',l);}catch(e){}
+}
+var startLang='en';
+try{startLang=localStorage.getItem('gg_lang')||((navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en');}catch(e){}
+setLang(startLang);
+langBtn.addEventListener('click',function(){setLang(document.documentElement.lang==='es'?'en':'es');});
+
 document.getElementById('copyPhone').addEventListener('click',function(){
   var b=this;
   function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
-  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy number';},1600);}
+  function done(){var es=document.documentElement.lang==='es';b.textContent=es?'Copiado':'Copied';setTimeout(function(){b.textContent=es?'Copiar número':'Copy number';},1600);}
   try{navigator.clipboard.writeText('(786) 413-6087').then(done).catch(sel);}catch(e){sel();}
 });
 </script>
